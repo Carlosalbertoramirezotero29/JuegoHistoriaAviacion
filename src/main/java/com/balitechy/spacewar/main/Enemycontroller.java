@@ -20,13 +20,12 @@ public class Enemycontroller {
             for (int j = 0; j < bullets.getbullets().size(); j++) {
                 if(abs(bullets.getbullets().get(j).getX()-en.get(i).getX())<=30 && abs(bullets.getbullets().get(j).getY()-en.get(i).getY())<=20){
                     enes.add(en.get(i));
-                    player.setPuntaje(player.getPuntaje()+1000);
                 }
             }
             en.get(i).tick();
         }
         for(ene e:enes){
-            player.setPuntaje(player.getPuntaje()+10);
+            player.setPuntaje(player.getPuntaje()+100);
             en.remove(e);
         }
     }
